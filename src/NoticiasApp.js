@@ -1,9 +1,10 @@
 import React from "react";
+import { AppRouter } from "./router/AppRouter";
 
 export const NoticiasApp = () => {
   return (
-    <div>
-      <h1>Noticias App</h1>
-    </div>
+    <>
+      <AppRouter />
+    </>
   );
 };
