@@ -2,8 +2,15 @@ import React from "react";
 
 export const HomePage = () => {
   return (
-    <div>
-      <h1>HomePage</h1>
-    </div>
+    <section className="home">
+      <div className="home__container">
+        <h3>HomePage</h3>
+        <h3>HomePage</h3>
+        <h3>HomePage</h3>
+        <h3>HomePage</h3>
+        <h3>HomePage</h3>
+        <h3>HomePage</h3>
+      </div>
+    </section>
   );
 };
