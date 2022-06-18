@@ -24,11 +24,6 @@ export const Navbar = () => {
         </div>
         <nav className={`aside ${style ? "aside__toggle" : ""}`}>
           <ul className="nav">
-            <li className={`nav__logo ${style ? "nav__logo--toggle" : ""} `}>
-              <Link to={"/home"}>
-                <img src="./assets/img/logo-nav.svg" alt="logo" />
-              </Link>
-            </li>
             <li>
               <Link className="btn" to={"/login"}>
                 Login

@@ -101,22 +101,6 @@ ol {
   overflow-y: hidden;
 }
 
-.nav__logo {
-  align-self: center;
-  margin-bottom: 4rem;
-  height: 0;
-  width: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.nav__logo--toggle {
-  display: flex;
-  height: initial;
-  width: initial;
-  opacity: 1;
-}
-
 .menu {
   background: var(--text-primary);
   border: 1px solid var(--color-main);
@@ -180,6 +164,10 @@ ol {
     display: flex;
   }
 
+  .header__container .logo img {
+    width: 20rem;
+  }
+
   .aside {
     background: #fff;
     position: absolute;
@@ -187,21 +175,22 @@ ol {
     width: 0;
     top: 0;
     height: 100vh;
-    padding-top: 100px;
+    padding-top: 8rem;
     overflow: hidden;
     transition: all 0.3s ease;
   }
 
   .nav {
     flex-direction: column;
-    padding: 0 4rem;
+    padding: 0 7rem;
   }
 
   .nav li .btn {
     background-color: var(--color-terceary);
     color: var(--text-primary);
-    width: 20rem;
     font-size: 2.5rem;
+    width: 20rem;
+    padding: 1.5rem;
   }
 
   .nav li a:hover {
@@ -238,10 +227,6 @@ ol {
     color: var(--text-primary);
     width: 13rem;
     font-size: 1.6rem;
-  }
-
-  .nav__logo img {
-    width: 20rem;
   }
 }
 
