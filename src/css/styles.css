@@ -111,7 +111,7 @@ ol {
   height: 3.5rem;
   width: 4rem;
   position: relative;
-  right: 0px;
+  right: 0;
   z-index: 50;
   display: none;
   transition: all 0.3s ease;
@@ -345,7 +345,6 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: var(--color-secundary); */
 }
 
 .login__container {
@@ -401,7 +400,7 @@ ol {
 
 .span {
   color: var(--text-secundary);
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -433,5 +432,45 @@ ol {
   }
   .form {
     width: 80%;
+  }
+}
+
+/* -------------------------- ResetPassword -------------------------*/
+.resetPass {
+  min-height: 100vh;
+  padding: 0 var(--padding-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resetPass__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-primary);
+  border-radius: 1rem;
+  width: 50rem;
+  padding: 3rem 2.5rem;
+}
+
+.resetPass__container img {
+  width: 15rem;
+}
+
+.resetPass__container h2 {
+  margin: 2rem 0;
+  text-align: center;
+  color: #334155;
+}
+
+.resetBtn {
+  max-width: 25rem;
+}
+
+@media (max-width: 576px) {
+  .resetPass__container img {
+    width: 10rem;
   }
 }
