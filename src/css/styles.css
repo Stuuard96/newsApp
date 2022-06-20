@@ -51,6 +51,7 @@ ol {
 
 .btn {
   border: none;
+  cursor: pointer;
   border-radius: 0.5rem;
   background-color: var(--color-terceary);
   display: inline-block;
@@ -58,15 +59,8 @@ ol {
   padding: 1rem 2.4rem;
   width: 100%;
   font-size: 1.6rem;
-  color: var(--text-primary) !important;
+  color: var(--text-primary);
   transition: all 0.3s ease;
-}
-
-a:hover,
-a:focus {
-  border: none;
-  outline: none;
-  /* background: transparent; */
 }
 
 .btn:hover {
@@ -191,20 +185,14 @@ a:focus {
     padding: 0 7rem;
   }
 
-  /* .nav li .btn {
+  .nav li .btn {
     background-color: transparent;
+    border: 1.5px solid var(--color-terceary);
     color: var(--color-terceary);
-    border: 1.6px solid;
     font-size: 2.5rem;
     width: 20rem;
     padding: 1.5rem;
   }
-
-  .nav li .btn:hover {
-    background-color: var(--color-main);
-    color: var(--text-primary);
-    transform: initial;
-  } */
 
   .aside__toggle {
     width: 83vw;
@@ -353,17 +341,18 @@ a:focus {
 }
 
 .login__container {
-  height: 55rem;
+  width: 90rem;
+  height: 50rem;
   margin: 0 auto;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--text-primary);
 }
 
 .register__container {
-  height: 62rem;
+  height: 53rem;
 }
 
 .login__info--container {
@@ -384,17 +373,32 @@ a:focus {
 }
 
 .form {
-  width: 70%;
-  margin: 1rem 1.5rem 0 0;
+  margin-top: 2.5rem;
+  width: 65%;
+}
+
+.form p:first-child {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
 }
 
 .inputLogin {
-  padding-left: 1rem;
+  border: none;
+  margin-bottom: 2rem;
+  caret-color: var(--color-terceary);
+  border-bottom: 1px solid var(--color-terceary);
+  width: 100%;
   outline: none;
   font-size: 1.5rem;
 }
 
+.parrafo__alert {
+  color: red;
+}
+
 .title {
+  color: var(--color-terceary);
+  margin: 0;
   font-size: 2.25rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -429,11 +433,25 @@ a:focus {
 }
 
 @media (max-width: 576px) {
+  .inputLogin {
+    font-size: 1.3rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+
+  .parrafo {
+    font-size: 1.2rem;
+  }
   .login__container {
-    width: 90%;
+    width: 85%;
   }
   .form {
-    width: 80%;
+    width: 75%;
   }
 }
 

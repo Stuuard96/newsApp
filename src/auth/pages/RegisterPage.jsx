@@ -10,12 +10,13 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
     namesRegister: "",
     apellidoPaRegister: "",
     apellidoMaRegister: "",
+    telRegister: "",
     tipoDocRegister: "",
     numeroDocRegister: "",
   });
 
   if (isLogged) {
-    return <Navigate to="/home" />;
+    return <Navigate to="/perfil" />;
   }
 
   const handleInput = (e) => {
@@ -34,6 +35,7 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
       namesRegister,
       apellidoPaRegister,
       apellidoMaRegister,
+      telRegister,
       tipoDocRegister,
       numeroDocRegister,
     } = dataRegister;
@@ -49,6 +51,12 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
         secondLastName: apellidoMaRegister,
         displayName: emailRegister,
         email: emailRegister,
+        contacts: [
+          {
+            phone: telRegister,
+            type: "HOME",
+          },
+        ],
         attributes: [
           {
             name: "typeDocument",
@@ -77,9 +85,9 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
         <div className="login__info--container">
           <h2 className="title">Registrate</h2>
           <form className="form" onSubmit={handleSubmit}>
-            {error && <p className="alert alert-danger inputLogin">{error}</p>}
+            {error && <p className="parrafo parrafo__alert">{error}</p>}
             <input
-              className="form-control py-3 my-3 inputLogin"
+              className="form-control inputLogin"
               type="email"
               name="emailRegister"
               placeholder="Correo electronico"
@@ -89,7 +97,7 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
               autoComplete="new-off"
             />
             <input
-              className="form-control py-3 my-3 inputLogin"
+              className="inputLogin"
               type="password"
               name="passRegister"
               placeholder="*********"
@@ -97,7 +105,7 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
               required
             />
             <input
-              className="form-control py-3 my-3 inputLogin"
+              className="inputLogin"
               type="text"
               name="namesRegister"
               placeholder="Nombres"
@@ -106,7 +114,7 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
               autoComplete="new-off"
             />
             <input
-              className="form-control py-3 my-3 inputLogin"
+              className="inputLogin"
               type="text"
               name="apellidoPaRegister"
               placeholder="Apellido paterno"
@@ -115,7 +123,7 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
               autoComplete="new-off"
             />
             <input
-              className="form-control py-3 my-3 inputLogin"
+              className="inputLogin"
               type="text"
               name="apellidoMaRegister"
               placeholder="Apellido materno"
@@ -123,13 +131,23 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
               required
               autoComplete="new-off"
             />
+            <input
+              className="inputLogin"
+              type="number"
+              name="telRegister"
+              placeholder="Telefono"
+              onChange={handleInput}
+              required
+              autoComplete="new-off"
+            />
             <select
               defaultValue={"DEFAULT"}
-              className="form-select form-select-sm py-3 my-3 inputLogin text-muted"
+              className="inputLogin"
               name="tipoDocRegister"
               onChange={handleInput}
               required
               autoComplete="new-off"
+              style={{ color: "#666" }}
             >
               <option value="DEFAULT" disabled>
                 Tipo de documento
@@ -139,7 +157,7 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
               <option value="CEX">CEX</option>
             </select>
             <input
-              className="form-control py-3 my-3 inputLogin"
+              className="inputLogin"
               type="number"
               name="numeroDocRegister"
               placeholder="Nro. de documento"
@@ -147,7 +165,7 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
               required
               autoComplete="new-off"
             />
-            <button className="btn py-3 my-3">Resgistrarse</button>
+            <button className="btn">Resgistrarse</button>
             <p className="parrafo">
               ¿Ya tienes una cuenta?{" "}
               <Link to={"/login"}>

@@ -36,9 +36,9 @@ export const LoginPage = ({ handleLogged, isLogged }) => {
         <div className="login__info--container">
           <h2 className="title">Inicia sesión</h2>
           <form className="form" onSubmit={handleSubmit}>
-            {error && <p className="alert alert-danger inputLogin">{error}</p>}
+            {error && <p className="parrafo parrafo__alert">{error}</p>}
             <input
-              className="form-control py-3 my-3 inputLogin"
+              className="inputLogin"
               type="email"
               name="emailLogin"
               placeholder="Correo electronico"
@@ -48,7 +48,7 @@ export const LoginPage = ({ handleLogged, isLogged }) => {
               autoComplete="new-off"
             />
             <input
-              className="form-control py-3 my-3 inputLogin"
+              className="inputLogin inputLoginError"
               type="password"
               name="passLogin"
               placeholder="*********"
@@ -61,7 +61,7 @@ export const LoginPage = ({ handleLogged, isLogged }) => {
                 <span className="span">Presiona aquí</span>
               </Link>
             </p>
-            <button className="btn py-3 my-3">Ingresar</button>
+            <button className="btn">Ingresar</button>
             <p className="parrafo">
               ¿Aún no tienes una cuenta?{" "}
               <Link to={"/register"}>
