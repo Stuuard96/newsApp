@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Identity from "@arc-publishing/sdk-identity";
 import { Link, Navigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
 
-export const RegisterPage = () => {
-  const urlBase = "https://api-sandbox.elcomercio.pe";
-  const [isLogged, setIsLogged] = useState(false);
+export const RegisterPage = ({ handleLogged, isLogged }) => {
   const [error, setError] = useState(false);
   const [dataRegister, setDataRegister] = useState({
     emailRegister: "",
@@ -17,12 +14,8 @@ export const RegisterPage = () => {
     numeroDocRegister: "",
   });
 
-  useEffect(() => {
-    Identity.apiOrigin = urlBase;
-  });
-
   if (isLogged) {
-    return <Navigate to="/perfil" />;
+    return <Navigate to="/home" />;
   }
 
   const handleInput = (e) => {
@@ -71,7 +64,7 @@ export const RegisterPage = () => {
       }
     )
       .then((res) => {
-        setIsLogged(true);
+        handleLogged();
       })
       .catch((err) => {
         setError(err.message);

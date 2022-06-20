@@ -1,8 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Identity from "@arc-publishing/sdk-identity";
 
-export const Navbar = () => {
+export const Navbar = ({ handleClosedSession, isLogged }) => {
   const [style, setStyle] = useState(false);
+  const [dataRegister, setDataRegister] = useState({});
+
+  useEffect(() => {
+    Identity.getUserProfile().then((res) => {
+      const { email, firstName, lastName, secondLastName, attributes } = res;
+      const tipDocUser = attributes[0].value;
+      const numDocUser = attributes[1].value;
+      setDataRegister({
+        emailRegister: email,
+        namesRegister: firstName,
+        apellidoPaRegister: lastName,
+        apellidoMaRegister: secondLastName,
+        tipoDocRegister: tipDocUser,
+        numeroDocRegister: numDocUser,
+      });
+    });
+  }, [setDataRegister]);
 
   const handleStyle = () => {
     setStyle(!style);
@@ -24,16 +42,37 @@ export const Navbar = () => {
         </div>
         <nav className={`aside ${style ? "aside__toggle" : ""}`}>
           <ul className="nav">
-            <li>
-              <Link className="btn" to={"/login"}>
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link className="btn" to={"/register"}>
-                Register
-              </Link>
-            </li>
+            {isLogged ? (
+              <>
+                <li>
+                  <Link className="btn" to={"/perfil"}>
+                    {dataRegister.namesRegister}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="btn"
+                    to={"/home"}
+                    onClick={handleClosedSession}
+                  >
+                    Logout
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link className="btn" to={"/login"}>
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <Link className="btn" to={"/register"}>
+                    Register
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </div>

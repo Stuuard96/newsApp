@@ -58,21 +58,27 @@ ol {
   padding: 1rem 2.4rem;
   width: 100%;
   font-size: 1.6rem;
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  border: none;
+  outline: none;
+  /* background: transparent; */
 }
 
 .btn:hover {
   background-color: var(--color-main);
-  color: var(--text-primary);
   transform: scale(1.03);
 }
 
 .home__container,
-.perfilPage {
+.perfil__container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 8.7rem var(--padding-container) 4.1rem;
+  padding: 13rem var(--padding-container) 4.1rem;
 }
 
 /* ------------------------- Header ------------------------------- */
@@ -185,19 +191,20 @@ ol {
     padding: 0 7rem;
   }
 
-  .nav li .btn {
-    background-color: var(--color-terceary);
-    color: var(--text-primary);
+  /* .nav li .btn {
+    background-color: transparent;
+    color: var(--color-terceary);
+    border: 1.6px solid;
     font-size: 2.5rem;
     width: 20rem;
     padding: 1.5rem;
   }
 
-  .nav li a:hover {
+  .nav li .btn:hover {
     background-color: var(--color-main);
-    color: #fff;
+    color: var(--text-primary);
     transform: initial;
-  }
+  } */
 
   .aside__toggle {
     width: 83vw;
@@ -222,12 +229,10 @@ ol {
     width: 3.5rem;
   }
 
-  .nav li .btn {
-    background-color: var(--color-terceary);
-    color: var(--text-primary);
+  /* .nav li .btn {
     width: 13rem;
     font-size: 1.6rem;
-  }
+  } */
 }
 
 /*---------------------------- Footer --------------------------*/
@@ -385,11 +390,8 @@ ol {
 
 .inputLogin {
   padding-left: 1rem;
+  outline: none;
   font-size: 1.5rem;
-}
-
-.inputLogin:placeholder-shown {
-  padding-left: 1.7rem;
 }
 
 .title {
