@@ -8,6 +8,11 @@ export const AppRouter = () => {
   const urlBase = "https://api-sandbox.elcomercio.pe";
   const [isLogged, setIsLogged] = useState(false);
 
+  useEffect(() => {
+    Identity.apiOrigin = urlBase;
+    handleLogged();
+  });
+
   const handleLogged = () => {
     Identity.isLoggedIn()
       .then((res) => {
@@ -25,11 +30,6 @@ export const AppRouter = () => {
       setIsLogged(false);
     });
   };
-
-  useEffect(() => {
-    Identity.apiOrigin = urlBase;
-    handleLogged();
-  });
 
   return (
     <Routes>

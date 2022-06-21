@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Identity from "@arc-publishing/sdk-identity";
-import { Navigate } from "react-router-dom";
 
 export const PerfilPage = ({ isLogged }) => {
   const [error, setError] = useState(false);
@@ -98,8 +97,8 @@ export const PerfilPage = ({ isLogged }) => {
   } */
 
   return (
-    <section className="login">
-      <div className="login__container register__container">
+    <section className="perfil">
+      <div className="login__container perfil__container">
         <div className="login__info--container">
           <h2 className="title">Bienvenido a tu perfil</h2>
           <form className="form" onSubmit={handleSubmit}>
