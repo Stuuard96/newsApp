@@ -51,12 +51,10 @@ export const ResetPassPage = () => {
           <div className="login__container">
             <div className="login__info--container">
               <h2 className="title">Restablece tu contraseña</h2>
-              {error && (
-                <p className="alert alert-danger inputLogin">{error}</p>
-              )}
               <form className="form" onSubmit={handleSubmit}>
+                {error && <p className="parrafo parrafo__alert">{error}</p>}
                 <input
-                  className="form-control py-3 my-3 inputLogin"
+                  className="inputLogin"
                   type="email"
                   name="emailLogin"
                   placeholder="Correo electronico"
@@ -65,14 +63,14 @@ export const ResetPassPage = () => {
                   autoFocus
                   autoComplete="new-off"
                 />
-                <button className="btn py-3 my-3" onClick={handleSubmit}>
+                <button className="btn" onClick={handleSubmit}>
                   Restablecer
                 </button>
-                <Link to={"/login"}>
-                  <span className="span parrafo">
-                    Regresar a Iniciar Sesión
-                  </span>
-                </Link>
+                <p className="parrafo">
+                  <Link to={"/login"}>
+                    <span className="span">Regresar a Iniciar Sesión</span>
+                  </Link>
+                </p>
               </form>
             </div>
             <img

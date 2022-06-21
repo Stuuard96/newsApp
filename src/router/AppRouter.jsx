@@ -7,7 +7,6 @@ import { NoticiasRoutes } from "../noticias/routes/NoticiasRoutes";
 export const AppRouter = () => {
   const urlBase = "https://api-sandbox.elcomercio.pe";
   const [isLogged, setIsLogged] = useState(false);
-
   useEffect(() => {
     Identity.apiOrigin = urlBase;
     handleLogged();

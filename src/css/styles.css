@@ -351,7 +351,7 @@ ol {
 }
 
 .register__container {
-  height: 53rem;
+  height: 55rem;
 }
 
 .login__info--container {
@@ -396,6 +396,7 @@ ol {
 }
 
 .title {
+  padding: 0 1.5rem;
   color: var(--color-terceary);
   margin: 0;
   font-size: 2.25rem;
@@ -444,11 +445,14 @@ ol {
   }
 
   .parrafo {
+    padding: 0 1.5rem;
     font-size: 1.2rem;
   }
+
   .login__container {
     width: 85%;
   }
+
   .form {
     width: 75%;
   }
