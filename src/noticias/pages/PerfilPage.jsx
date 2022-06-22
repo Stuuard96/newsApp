@@ -182,7 +182,7 @@ export const PerfilPage = ({ isLogged }) => {
               required
               autoComplete="new-off"
             />
-            <button className="btn">Actualizar</button>
+            <button className="btn">Actualizar datos</button>
           </form>
         </div>
         <img className="image__container" src="assets/img/login.svg" alt="" />

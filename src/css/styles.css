@@ -39,10 +39,6 @@ ol {
   margin: 0;
 }
 
-.logo img {
-  cursor: pointer;
-}
-
 .parrafo {
   text-align: center;
   font-weight: 500;
@@ -71,7 +67,7 @@ ol {
 .home__container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 13rem var(--padding-container) 4.1rem;
+  padding: 11rem var(--padding-container) 2rem;
 }
 
 /* ------------------------- Header ------------------------------- */
@@ -88,8 +84,13 @@ ol {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 3rem var(--padding-container);
+  padding: 2.5rem var(--padding-container);
   transition: all 0.3s ease;
+}
+
+.header__container .logo img {
+  width: 20rem;
+  cursor: pointer;
 }
 
 .nav {
@@ -163,12 +164,8 @@ ol {
     display: flex;
   }
 
-  .header__container .logo img {
-    width: 20rem;
-  }
-
   .aside {
-    background: #fff;
+    background: var(--text-primary);
     position: absolute;
     right: 0;
     width: 0;
@@ -204,7 +201,7 @@ ol {
 
 @media (max-width: 576px) {
   .header__container {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .header__container .logo img {
@@ -212,8 +209,8 @@ ol {
   }
 
   .menu {
-    height: 3rem;
-    width: 3.5rem;
+    height: 2.8rem;
+    width: 3.3rem;
   }
 
   .nav li .btn {
@@ -311,7 +308,7 @@ ol {
 
 @media (max-width: 576px) {
   .footer__container {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .footer__container .footer__list ul li {
@@ -500,7 +497,7 @@ ol {
 
 /* -------------------------- Perfil ------------------------------ */
 .perfil {
-  padding: 15rem 0 5rem 0;
+  padding: 13rem 0 4rem;
 }
 
 .perfil__container {

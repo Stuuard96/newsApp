@@ -32,12 +32,7 @@ export const AppRouter = () => {
 
   return (
     <Routes>
-      <Route
-        path="resetPass"
-        element={
-          <ResetPassPage handleLogged={handleLogged} isLogged={isLogged} />
-        }
-      />
+      <Route path="resetPass" element={<ResetPassPage />} />
       <Route
         path="register"
         element={
