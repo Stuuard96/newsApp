@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NoticiasList } from "../components/NoticiasList";
+import { NoticiasCategory } from "../components/NoticiasCategory";
 
 export const HomePage = () => {
   const [category, setCategory] = useState("");
@@ -19,6 +20,7 @@ export const HomePage = () => {
   return (
     <section className="home">
       <div className="home__container">
+        <NoticiasCategory setCategory={setCategory} />
         <NoticiasList articles={articles} />
       </div>
     </section>
