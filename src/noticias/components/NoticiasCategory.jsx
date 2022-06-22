@@ -1,9 +1,8 @@
 import React from "react";
-import useSelected from "../hooks/useSelected";
 
 export const NoticiasCategory = ({ setCategory }) => {
   const listCategorys = [
-    { value: "general", label: "Gereral" },
+    { value: "general", label: "General" },
     { value: "entertainment", label: "Entrenimiento" },
     { value: "technology", label: "Tecnologia" },
     { value: "health", label: "Salud" },
@@ -12,26 +11,22 @@ export const NoticiasCategory = ({ setCategory }) => {
     { value: "sports", label: "Deportes" },
   ];
 
-  // hook
-  const [category, SelectCategory] = useSelected("general", listCategorys);
-
-  const handleOnSubmit = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
-    setCategory(category);
+    setCategory(e.target.value);
   };
+
   return (
-    <div className="row">
-      <div className="col 12 m8 offset-m2">
-        <form onSubmit={handleOnSubmit}>
-          <h2 className="">Encuentra Noticias por Categoria</h2>
-
-          <SelectCategory />
-
-          <div className="input-field col s12">
-            <input type="submit" className="" value="Buscar"></input>
-          </div>
-        </form>
-      </div>
+    <div className="home__categorias">
+      <ul className="home__categorias--list">
+        {listCategorys.map((category) => (
+          <li key={category.value}>
+            <button onClick={handleClick} value={category.value}>
+              {category.label}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

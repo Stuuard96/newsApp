@@ -52,9 +52,9 @@ ol {
   background-color: var(--color-terceary);
   display: inline-block;
   text-align: center;
-  padding: 1rem 2.4rem;
+  padding: 0.8rem 1.8rem;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: var(--text-primary);
   transition: all 0.3s ease;
 }
@@ -62,12 +62,6 @@ ol {
 .btn:hover {
   background-color: var(--color-main);
   transform: scale(1.03);
-}
-
-.home__container {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 11rem var(--padding-container) 2rem;
 }
 
 /* ------------------------- Header ------------------------------- */
@@ -84,12 +78,12 @@ ol {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2.5rem var(--padding-container);
+  padding: 1.5rem var(--padding-container);
   transition: all 0.3s ease;
 }
 
 .header__container .logo img {
-  width: 20rem;
+  width: 14rem;
   cursor: pointer;
 }
 
@@ -170,7 +164,7 @@ ol {
     right: 0;
     width: 0;
     top: 0;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 8rem;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -185,9 +179,9 @@ ol {
     background-color: transparent;
     border: 1.5px solid var(--color-terceary);
     color: var(--color-terceary);
-    font-size: 2.5rem;
-    width: 20rem;
-    padding: 1.5rem;
+    font-size: 2rem;
+    width: 15rem;
+    padding: 1rem 0;
   }
 
   .aside__toggle {
@@ -201,16 +195,16 @@ ol {
 
 @media (max-width: 576px) {
   .header__container {
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
 
   .header__container .logo img {
-    width: 15rem;
+    width: 12rem;
   }
 
   .menu {
-    height: 2.8rem;
-    width: 3.3rem;
+    height: 2.5rem;
+    width: 3rem;
   }
 
   .nav li .btn {
@@ -497,7 +491,7 @@ ol {
 
 /* -------------------------- Perfil ------------------------------ */
 .perfil {
-  padding: 13rem 0 4rem;
+  padding: 11rem 0 4rem;
 }
 
 .perfil__container {
@@ -508,4 +502,40 @@ ol {
   .perfil {
     padding: 12rem 0 5rem 0;
   }
+}
+
+/* ---------------------------  Home ---------------------------- */
+.home__container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem var(--padding-container) 4rem;
+}
+
+.home__categorias {
+  padding-top: 6.1rem;
+  border-bottom: 1px solid var(--color-secundary);
+}
+
+.home__categorias--list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem var(--padding-container);
+}
+
+.home__categorias button {
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: none;
+  cursor: pointer;
+}
+
+.home__categorias button:hover {
+  color: var(--text-secundary);
+  text-decoration: underline;
 }

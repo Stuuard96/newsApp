@@ -4,7 +4,7 @@ import { NoticiasList } from "../components/NoticiasList";
 import { NoticiasCategory } from "../components/NoticiasCategory";
 
 export const HomePage = () => {
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("general");
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -19,8 +19,8 @@ export const HomePage = () => {
 
   return (
     <section className="home">
+      <NoticiasCategory setCategory={setCategory} />
       <div className="home__container">
-        <NoticiasCategory setCategory={setCategory} />
         <NoticiasList articles={articles} />
       </div>
     </section>

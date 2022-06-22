@@ -5,7 +5,7 @@ export const NoticiaItem = ({ article }) => {
   const { title, description, url, urlToImage, source } = article;
   const Imagen = urlToImage ? (
     <div className="card-image">
-      <img src={urlToImage} alt={title} />
+      <img width={800} height={500} src={urlToImage} alt={title} />
       <span className="card-title">{source.name}</span>
     </div>
   ) : null;
