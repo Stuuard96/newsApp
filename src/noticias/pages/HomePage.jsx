@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import { NoticiasList } from "../components/NoticiasList";
 import { NoticiasCategory } from "../components/NoticiasCategory";
 
@@ -12,16 +12,16 @@ export const HomePage = () => {
       // const key = "69536173bca64950846a532c71b5c150";
       const key = "deb00c9a16614ba5acdadf7cca2cfb8b";
       const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`;
-      const request = new Request(url);
-      await fetch(request)
-        .then((response) => response.json())
+      const response = await axios.get(url);
+      setArticles(response.data.articles);
+      /*
+        .then((response) => response.get())
         .then((data) => {
           setArticles(data.articles);
-          // console.log(data.articles);
         })
         .catch((error) => {
           console.log(error);
-        });
+        }); */
     };
     requestApi();
   }, [category]);
