@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Identity from "@arc-publishing/sdk-identity";
 
-export const PerfilPage = ({ isLogged }) => {
+export const PerfilPage = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [dataRegister, setDataRegister] = useState({});
@@ -92,17 +92,13 @@ export const PerfilPage = ({ isLogged }) => {
     numeroDocRegister = "",
   } = dataRegister;
 
-  /* if (!isLogged) {
-    return <Navigate to="/home" />;
-  } */
-
   return (
     <section className="perfil">
       <div className="login__container perfil__container">
         <div className="login__info--container">
           <h2 className="title">Bienvenido a tu perfil</h2>
           <form className="form" onSubmit={handleSubmit}>
-            {error && <p className="parrafo parrafo__error">{error}</p>}
+            {error && <p className="parrafo parrafo__alert">{error}</p>}
             {success && <p className="parrafo parrafo__success">{success}</p>}
             <input
               className="inputLogin"

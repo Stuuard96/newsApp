@@ -22,8 +22,6 @@ export const HomePage = () => {
     requestApi();
   }, [category]);
 
-  console.log(articles);
-
   return (
     <section className="home">
       <NoticiasCategory setCategory={setCategory} />

@@ -3,7 +3,7 @@ import Identity from "@arc-publishing/sdk-identity";
 import { Link, Navigate } from "react-router-dom";
 
 export const RegisterPage = ({ handleLogged, isLogged }) => {
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
   const [dataRegister, setDataRegister] = useState({
     emailRegister: "",
     passRegister: "",
@@ -16,7 +16,7 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
   });
 
   if (isLogged) {
-    return <Navigate to="/perfil" />;
+    return <Navigate to="/home" />;
   }
 
   const handleInput = (e) => {
