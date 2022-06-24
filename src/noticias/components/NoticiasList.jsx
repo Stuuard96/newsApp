@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { NoticiaItem } from "./NoticiaItem";
 
 export const NoticiasList = ({ articles }) => {
@@ -13,6 +13,6 @@ export const NoticiasList = ({ articles }) => {
   );
 };
 
-/* NoticiasList.propTypes = {
+NoticiasList.propTypes = {
   articles: PropTypes.object.isRequired,
-}; */
+};
