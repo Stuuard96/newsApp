@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { NoticiasList } from "../components/NoticiasList";
 import { NoticiasCategory } from "../components/NoticiasCategory";
 
@@ -8,16 +8,20 @@ export const HomePage = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    const requestApi = async () => {
+    const requestApi = () => {
       // const key = "69536173bca64950846a532c71b5c150";
       const key = "deb00c9a16614ba5acdadf7cca2cfb8b";
       const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`;
-      await axios
-        .get(url)
-        .then((response) => {
-          setArticles(response.data.articles);
+      const request = new Request(url);
+      fetch(request)
+        .then((response) => response.json())
+        .then((data) => {
+          setArticles(data.articles);
+          // console.log(data.articles);
         })
-        .catch((error) => console.log(error));
+        .catch((error) => {
+          console.log(error);
+        });
     };
     requestApi();
   }, [category]);

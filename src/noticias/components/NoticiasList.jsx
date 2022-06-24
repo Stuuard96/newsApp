@@ -1,8 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { NoticiaItem } from "./NoticiaItem";
 
 export const NoticiasList = ({ articles }) => {
+  // console.log(articles);
   return (
     <>
       {articles.map((article, index) => (
@@ -12,6 +13,6 @@ export const NoticiasList = ({ articles }) => {
   );
 };
 
-NoticiasList.propTypes = {
-  articles: PropTypes.array.isRequired,
-};
+/* NoticiasList.propTypes = {
+  articles: PropTypes.object.isRequired,
+}; */
