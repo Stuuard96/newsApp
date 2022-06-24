@@ -5,8 +5,8 @@ import { NoticiaItem } from "./NoticiaItem";
 export const NoticiasList = ({ articles }) => {
   return (
     <>
-      {articles.map((article) => (
-        <NoticiaItem key={article.url} article={article} />
+      {articles.map((article, index) => (
+        <NoticiaItem key={index} article={article} />
       ))}
     </>
   );

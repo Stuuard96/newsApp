@@ -23,7 +23,7 @@ export const RegisterPage = ({ handleLogged, isLogged }) => {
     const { value, name } = e.target;
     setDataRegister({
       ...dataRegister,
-      [name]: value,
+      [name]: value.trim(),
     });
   };
 
