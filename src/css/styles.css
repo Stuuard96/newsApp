@@ -669,6 +669,9 @@ ol {
   .home__noticias .card:first-child img {
     width: 95.1rem;
   }
+  .card .card__imagen img {
+    width: 46.8rem;
+  }
 }
 
 @media (max-width: 767px) {
