@@ -40,4 +40,3 @@ Desktop             |  Mobile
 
 ## Autores
 - [@Stuuard96](https://www.github.com/Stuuard96)
-- [@JesusP](https://github.com/JesussPacheco)
