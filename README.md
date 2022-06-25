@@ -22,7 +22,7 @@ seleccionada: Ciencia, Tecnología, Deportes, etc.
 - https://www.npmjs.com/package/@arc-publishing/sdk-identity
 - https://newsapi.org/
 - https://axios-http.com/docs/intro
-
+- https://reactrouter.com/docs/en/v6
 
 
 ## Vista previa del proyecto
@@ -40,3 +40,4 @@ Desktop             |  Mobile
 
 ## Autores
 - [@Stuuard96](https://www.github.com/Stuuard96)
+- [@JesusP](https://github.com/JesussPacheco)
