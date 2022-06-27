@@ -11,6 +11,9 @@ también cuenta con una sección de las principales
 noticias de un país según la categoria 
 seleccionada: Ciencia, Tecnología, Deportes, etc.
 
+## Link del proyecto
+https://article-app-react.netlify.app/home
+
 ## Funcionalidades
 - Navegabilidad utilizando rutas de React-router-dom
 - Sistema de registro y login, validado.
@@ -23,7 +26,6 @@ seleccionada: Ciencia, Tecnología, Deportes, etc.
 - https://newsapi.org/
 - https://axios-http.com/docs/intro
 - https://reactrouter.com/docs/en/v6
-
 
 ## Vista previa del proyecto
 Desktop             |  Mobile
@@ -38,5 +40,5 @@ Desktop             |  Mobile
 - npm install axios
 - npm start
 
-## Autores
+## Autor
 - [@Stuuard96](https://www.github.com/Stuuard96)
