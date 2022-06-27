@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import Identity from "@arc-publishing/sdk-identity";
+import { useUserContext } from "../../context/userContext";
 
-export const LoginPage = ({ handleLogged, isLogged }) => {
+export const LoginPage = () => {
+  const user = useUserContext();
+  const { handleLogged, isLogged } = user;
   const [error, setError] = useState(false);
   const [dataLogin, setDataLogin] = useState({ emailLogin: "", passLogin: "" });
 

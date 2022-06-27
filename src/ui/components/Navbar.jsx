@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Identity from "@arc-publishing/sdk-identity";
+import { useUserContext } from "../../context/userContext";
 
-export const Navbar = ({ handleClosedSession, isLogged }) => {
+export const Navbar = () => {
+  const user = useUserContext();
+  const { handleClosedSession, isLogged } = user;
   const [style, setStyle] = useState(false);
   const [dataRegister, setDataRegister] = useState({});
 

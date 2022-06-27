@@ -3,10 +3,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { HomePage, PerfilPage } from "../pages";
 import { Footer, Navbar } from "../../ui";
 
-export const NoticiasRoutes = ({ handleClosedSession, isLogged }) => {
+export const NoticiasRoutes = () => {
   return (
     <>
-      <Navbar handleClosedSession={handleClosedSession} isLogged={isLogged} />
+      <Navbar />
       <Routes>
         <Route path="home" element={<HomePage />} />
         <Route path="perfil" element={<PerfilPage />} />

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Identity from "@arc-publishing/sdk-identity";
 import { Link, Navigate } from "react-router-dom";
+import { useUserContext } from "../../context/userContext";
 
-export const RegisterPage = ({ handleLogged, isLogged }) => {
+export const RegisterPage = () => {
+  const user = useUserContext();
+  const { handleLogged, isLogged } = user;
   const [error, setError] = useState("");
   const [dataRegister, setDataRegister] = useState({
     emailRegister: "",
