@@ -630,7 +630,7 @@ ol {
 }
 
 .card .card__imagen img {
-  width: 100%;
+  max-width: 100%;
   object-fit: cover;
   filter: brightness(70%);
 }
@@ -716,7 +716,7 @@ ol {
     font-size: 1.3rem;
   }
   .home__noticias .card:first-child p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .home__noticias .card:first-child a {
     font-size: 1rem;
