@@ -10,14 +10,11 @@ export const HomePage = () => {
   useEffect(() => {
     const requestApi = async () => {
       // const key = "69536173bca64950846a532c71b5c150";
-      const key = "deb00c9a16614ba5acdadf7cca2cfb8b";
-      const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`;
-      await axios
-        .get(url)
-        .then((response) => {
-          setArticles(response.data.articles);
-        })
-        .catch((error) => console.log(error));
+      // const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`;
+      const BASE_URL = "https://saurav.tech/NewsAPI/";
+      const url = `${BASE_URL}/top-headlines/category/${category}/us.json`;
+      const response = await axios.get(url);
+      setArticles(response.data.articles);
     };
     requestApi();
   }, [category]);

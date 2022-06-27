@@ -5,7 +5,7 @@ export const NoticiaItem = ({ article }) => {
   const { title, description, url, urlToImage, source } = article;
   const Imagen = (
     /* urlToImage ? ( */
-    <figure style={{ margin: "0" }} className="card__imagen">
+    <div style={{ margin: "0" }} className="card__imagen">
       <a href={url} target="__blank">
         <img
           loading="lazy"
@@ -17,7 +17,7 @@ export const NoticiaItem = ({ article }) => {
       </a>
 
       <span className="card-title">{source.name}</span>
-    </figure>
+    </div>
   );
   // ) : null;
 
